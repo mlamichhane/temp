@@ -3,7 +3,6 @@ from Stack import Stack
 def isValidExpression(expression):
     
     stack = Stack(100)
-    matching_brackets = {')': '(', '}': '{', ']': '['}
 
     for char in expression:
         if char in '({[':
