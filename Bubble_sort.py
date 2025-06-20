@@ -16,5 +16,3 @@ if __name__ == "__main__":
     bubbleSort(theNumbers)
     print("Sorted numbers are:", theNumbers)
 
-
-    
