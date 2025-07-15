@@ -29,7 +29,10 @@ class Graph:
             if vertex not in visited:
                 print(vertex, end=" ")
                 visited.add(vertex)
-                queue.extend(neighbor for neighbor in self.adjacency_list[vertex] if neighbor not in visited)
+                queue.extend(neighbor 
+                             for neighbor in self.adjacency_list[vertex] 
+                             if neighbor not in visited
+                             )
         print()
 
     def dfs(self, start, visited=None):
