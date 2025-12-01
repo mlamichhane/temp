@@ -12,11 +12,11 @@ class CreditCard:
 
         The initial balance is zero.
         """
-        self. customer = customer
-        self. bank = bank
-        self. account = acnt
-        self. limit = limit
-        self. balance = 0
+        self._customer = customer
+        self._bank = bank
+        self._account = acnt
+        self._limit = limit
+        self._balance = 0
 
     def get_customer(self):
         """Return name of the customer."""
