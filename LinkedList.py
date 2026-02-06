@@ -62,6 +62,18 @@ class LinkedList:
             print(current.get_data())
             current = current.get_next()
 
+    def insertafter(self, target, item):
+        current = self.head
+        while current is not None:
+            if current.get_data() == target:
+                new_node = Node(item)
+                new_node.set_next(current.get_next())
+                current.set_next(new_node)
+                return
+            current = current.get_next()
+        print("Target not found in the list.")
+
+
 # Example usage:
 if __name__ == "__main__":
     mylist = LinkedList()
@@ -73,10 +85,12 @@ if __name__ == "__main__":
     mylist.add(26)
     mylist.add(54)
     
+    print("The list items are:")
     mylist.traverse()
     
-    mylist.remove(17)
+    mylist.insertafter(1, 99)
     
+    print("The list items are:")
     mylist.traverse()
     
     if mylist.search(17):
